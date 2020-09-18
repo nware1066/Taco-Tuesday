@@ -16,8 +16,7 @@ class App extends Component {
     fetchTaco()
     .then(tacoState => this.setState({taco: tacoState}))
     .then(() => console.log(this.state.taco))
-     // .then(this.setState({taco}))
-     // promise.then(newTaco => this.props.displayTaco(newTaco))
+
  }
 
   render() {
@@ -25,7 +24,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>It's Taco Time!!</h1>
-          <CurrentTaco getTaco={this.getTaco} />
+          <CurrentTaco getTaco={this.getTaco} taco={this.state.taco}/>
         </header>
       </div>
     );
