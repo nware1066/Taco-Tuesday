@@ -10,13 +10,13 @@ function CurrentTaco(props) {
         <img src={taco2} />
         <p>{props.taco.base_layer.name}</p>
         {props.taco.mixin &&
-          <p>{props.taco.mixin.name}</p>
+          <p>with {props.taco.mixin.name}</p>
         }
         {props.taco.condiment &&
-          <p>{props.taco.condiment.name}</p>
+          <p>and {props.taco.condiment.name}</p>
         }
         {props.taco.shell &&
-          <p>{props.taco.shell.name}</p>
+          <p>on {props.taco.shell.name}</p>
         }
 
       </section>
