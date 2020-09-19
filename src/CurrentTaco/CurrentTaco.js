@@ -28,8 +28,8 @@ function CurrentTaco(props) {
   } else {
     return (
       <section className="Current-taco-container">
-      <img src={taco3} className="taco-icon" alt="taco" />
-      <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Taco!</button>
+        <img src={taco3} className="taco-icon" alt="taco" />
+        <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Taco!</button>
       </section>
     )
   }
