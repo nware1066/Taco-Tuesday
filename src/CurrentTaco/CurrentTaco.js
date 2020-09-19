@@ -6,7 +6,7 @@ import taco2 from '../Assets/taco2.svg';
 function CurrentTaco(props) {
   if(props.taco.base_layer) {
     return (
-      <section>
+      <section className="Current-taco-container">
         <h1>{props.taco.base_layer.name} Taco</h1>
         <img src={taco2} className="taco-icon" alt="taco"/>
         <p>{props.taco.base_layer.name}</p>
@@ -19,13 +19,15 @@ function CurrentTaco(props) {
         {props.taco.shell &&
           <p>on {props.taco.shell.name}</p>
         }
-        <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Different Taco!</button>
-
+        <section className="button-container">
+          <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Different Taco!</button>
+          <button className="recipe-botton">Sounds tasty! Show Me The Recipe</button>
+        </section>
       </section>
     )
   } else {
     return (
-      <section>
+      <section className="Current-taco-container">
       <img src={taco3} className="taco-icon" alt="taco" />
       <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Taco!</button>
       </section>

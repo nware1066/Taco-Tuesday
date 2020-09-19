@@ -1,3 +1,27 @@
+
+.Current-taco-contaner {
+  background-color: #282c34;
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .taco-icon {
   height: 5em;
 }
+
+.taco-button {
+  display: inline-block;
+  margin: 3em;;
+}
+
+.button-container {
+  flex-direction: row;
+  align-items: center;
+}
+/*  */
