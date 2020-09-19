@@ -9,14 +9,12 @@ class App extends Component {
     this.state = {
       taco: {}
     }
-
   }
 
   getTaco = (event) => {
     fetchTaco()
     .then(tacoState => this.setState({taco: tacoState}))
     .then(() => console.log(this.state.taco))
-
  }
 
   render() {
