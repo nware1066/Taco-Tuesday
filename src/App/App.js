@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import CurrentTaco from '../CurrentTaco/CurrentTaco';
 import TacoRecipe from '../TacoRecipe/TacoRecipe';
 import { fetchTaco } from '../Api/ApiCalls'
@@ -23,7 +24,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>It's Taco Time!!</h1>
-          <CurrentTaco getTaco={this.getTaco} taco={this.state.taco}/>
+          <Route exact path="/">
+            <CurrentTaco getTaco={this.getTaco} taco={this.state.taco}/>
+          </Route>
         </header>
       </div>
     );
