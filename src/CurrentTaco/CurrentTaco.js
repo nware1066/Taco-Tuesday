@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import './currentTaco.css'
 import taco3 from '../Assets/taco3.svg';
 import taco2 from '../Assets/taco2.svg';
@@ -21,7 +22,7 @@ function CurrentTaco(props) {
         }
         <section className="button-container">
           <button className="taco-button" onClick={ event => props.getTaco(event)}>Get Me A Different Taco!</button>
-          <button className="recipe-botton">Sounds tasty! Show Me The Recipe</button>
+          <Link to="/recipe"><button className="recipe-botton">Sounds tasty! Show Me The Recipe</button></Link>
         </section>
       </section>
     )

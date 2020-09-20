@@ -17,7 +17,11 @@ class App extends Component {
     fetchTaco()
     .then(tacoState => this.setState({taco: tacoState}))
     .then(() => console.log(this.state.taco))
- }
+  }
+
+  getRecipe = (event) => {
+    
+  }
 
   render() {
     return (
@@ -29,7 +33,7 @@ class App extends Component {
             <CurrentTaco getTaco={this.getTaco} taco={this.state.taco}/>
           </Route>
           <Route exact path="/recipe">
-            <TacoRecipe />
+            <TacoRecipe taco={this.state.taco}/>
           </Route>
       </div>
     );
