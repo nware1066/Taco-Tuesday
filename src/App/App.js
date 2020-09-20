@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CurrentTaco from '../CurrentTaco/CurrentTaco';
+import TacoRecipe from '../TacoRecipe/TacoRecipe';
 import { fetchTaco } from '../Api/ApiCalls'
 import './App.css';
 
