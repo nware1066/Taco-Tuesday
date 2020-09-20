@@ -1,9 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './Components/App';
+import App from './App';
 
-test('renders learn react link', () => {
+test('has Taco Time header', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const header = getByText("It's Taco Time!!");
+  expect(header).toBeInTheDocument();
 });
+
+
+//
