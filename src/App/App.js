@@ -24,10 +24,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>It's Taco Time!!</h1>
+        </header>
           <Route exact path="/">
             <CurrentTaco getTaco={this.getTaco} taco={this.state.taco}/>
           </Route>
-        </header>
+          <Route exact path="/recipe">
+            <TacoRecipe />
+          </Route>
       </div>
     );
   }
