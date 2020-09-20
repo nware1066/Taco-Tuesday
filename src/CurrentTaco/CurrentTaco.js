@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import './currentTaco.css'
+import PropTypes from 'prop-types';
 import taco3 from '../Assets/taco3.svg';
 import taco2 from '../Assets/taco2.svg';
 
@@ -34,6 +35,10 @@ function CurrentTaco(props) {
       </section>
     )
   }
+    }
+
+    CurrentTaco.proptypes = {
+      taco: PropTypes.object
     }
 
 export default CurrentTaco;
