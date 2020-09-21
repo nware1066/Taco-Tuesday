@@ -5,11 +5,14 @@ import PropTypes from 'prop-types';
 import taco3 from '../Assets/taco3.svg';
 import taco2 from '../Assets/taco2.svg';
 
+// DRY up the conditional logic with an array and a loop
+// set a variable for the keys that change within 'taco' object
+
 function CurrentTaco(props) {
   if(props.taco.base_layer) {
     return (
       <section className="Current-taco-container">
-        <h1>{props.taco.base_layer.name} Taco</h1>
+        <h1>{props.taco.name}</h1>
         <img src={taco2} className="taco-icon" alt="taco"/>
         <p>{props.taco.base_layer.name}</p>
         {props.taco.mixin &&

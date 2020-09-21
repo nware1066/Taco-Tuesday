@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      taco: {}
+      taco: {},
+      favorites: []
     }
   }
 
@@ -20,7 +21,7 @@ class App extends Component {
   }
 
   getRecipe = (event) => {
-    
+
   }
 
   render() {
