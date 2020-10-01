@@ -25,27 +25,25 @@ const taco = {
   }
 }
 
-test('Should display a button and an icon)', () => {
+test('Should display an icon)', () => {
   render(
     <BrowserRouter>
       <CurrentTaco getTaco={getTaco} taco={taco}/>
     </BrowserRouter>
   );
-  const button1 = screen.getByRole("button", {name: "Get Me A Taco!", exact: false});
   const tacoIcon = screen.getByAltText("taco")
   expect(tacoIcon).toBeInTheDocument();
-  expect(button1).toBeInTheDocument();
 })
 
 // test getTaco
-test("Should invoke fetchTaco function on button click", async () => {
+test("Should invoke fetchTaco function on button click", () => {
   render(
       <BrowserRouter>
         <CurrentTaco getTaco={getTaco} taco={taco}/>
       </BrowserRouter>
-  )
+  );
 
-  const button = await screen.getByRole("button", {name: "Get Me A Different Taco!"}, {exact: false})
+  const button = screen.getByRole("button", {name: "Get Me A Different Taco!"}, {exact: false})
   fireEvent.click(button)
   expect(getTaco).toHaveBeenCalledTimes(1);
 })
